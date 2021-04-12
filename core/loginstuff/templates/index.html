@@ -4,6 +4,7 @@
     {% if user.is_authenticated %}
         <h1>Hello there, you are logged in!</h1>
         <p><a href="/logout">Logout?</a></p>
+        <p>Insert stuff <a href="/insert">here</a></p>
     {% else%}
         <h3>Looks like you need to login <a href="/login">here.</a></h3>
     {% endif %}

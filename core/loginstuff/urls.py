@@ -4,5 +4,6 @@ from . import views
 app_name = 'loginstuff'
 
 urlpatterns = [
-    path('', views.home)
+    path('', views.home),
+    path('insert/', views.insert_name)
 ]
