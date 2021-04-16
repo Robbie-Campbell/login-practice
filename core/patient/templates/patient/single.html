@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Patients - {{ patient.first_name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ patient.first_name }} {{ patient.last_name }}</h1>
+    <p>{{ patient.hospital_number }}</p>
+    {% for d2a in d2as %}
+        <h3>Discharge to Assess</h3>
+        <p>{{d2a.id}}</p>
+        <p>{{d2a.completion_date}}</p>
+        <p>{{d2a.extra_info}}</p>
+        <a href="{{ d2a.get_absolute_url }}">View here</a>
+    {% endfor %}
+{% endblock %}

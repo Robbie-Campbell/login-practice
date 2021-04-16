@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<form class="main" method="GET" action="" >
+    <input class="main" type="search" name="search"> 
+    <button class="main" type="submit"> Search </button>
+</form>
+{% for result in results %}
+    <h1>{{result.first_name}}</h1>
+    <p>{{ result.locality }}</p>
+    <a class="btn btn-primary" href="{{result.get_absolute_url}}">View</a>
+{% endfor %}
+{% endblock %}
